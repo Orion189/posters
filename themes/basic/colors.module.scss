@@ -1,0 +1,47 @@
+$primaryColorLight100: #9de4ff;
+$primaryColorMain100: #66b2ff;
+$primaryColorDark100: #2283cb;
+$primaryColorContrastText: #000000;
+
+$secondaryColorLight100: #98ee99;
+$secondaryColorMain100: #66bb6a;
+$secondaryColorDark100: #338a3e;
+$secondaryColorContrastText: #000000;
+
+$listItemText: rgba(254, 185, 12, .4);
+$menuBorder: rgba(204, 204, 204, 1);
+$menuBoxShadow: rgba(96, 97, 97, .5);
+
+$black100: rgba(0, 0, 0, 1);
+$black40: rgba(0, 0, 0, .4);
+$black12: rgba(0, 0, 0, .12);
+
+$white50: rgba(255, 255, 255, 0.5);
+$white60: rgba(255, 255, 255, 0.6);
+$white87: rgba(255, 255, 255, 0.87);
+$white100: rgba(255, 255, 255, 1);
+
+:export {
+    primaryColorLight100: $primaryColorLight100;
+    primaryColorMain100: $primaryColorMain100;
+    primaryColorDark100: $primaryColorDark100;
+    primaryColorContrastText: $primaryColorContrastText;
+
+    secondaryColorLight100: $secondaryColorLight100;
+    secondaryColorMain100: $secondaryColorMain100;
+    secondaryColorDark100: $secondaryColorDark100;
+    secondaryColorContrastText: $secondaryColorContrastText;
+
+    listItemText: $listItemText;
+    menuBorder: $menuBorder;
+    menuBoxShadow: $menuBoxShadow;
+
+    black100: $black100;
+    black40: $black40;
+    black12: $black12;
+
+    white50: $white50;
+    white60: $white60;
+    white87: $white87;
+    white100: $white100;
+}

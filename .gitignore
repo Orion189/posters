@@ -1,0 +1,14 @@
+.idea/
+.vscode/
+.next/
+.swc/
+.DS_Store
+.env
+/.eslintcache
+/coverage
+
+# dependencies
+/npm_cache
+/node_modules/
+/dist*/
+npm_cache/

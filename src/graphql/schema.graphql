@@ -1,0 +1,70 @@
+enum MovieType {
+    BOTH
+    MOVIE
+    SERIES
+}
+
+enum PosterType {
+    UNSET
+    POSTER
+    COVER
+    TEXTLESS
+    LOGO
+    PROMO
+    CUSTOM
+    ADVANCE
+    TEASER
+    THEATRICAL
+    RE_RELEASE
+    COMBO
+    VIDEO_RELEASE
+    CONCEPT
+    NEVER_PRINTED
+}
+
+type Country {
+    country_code: String!
+    country: String!
+}
+
+type Genre {
+    id: Int!
+    name: String!
+}
+
+type Poster {
+    id: Int!
+    group_id: Int!
+    country_code: String!
+    file_location: String!
+    width: Int!
+    height: Int!
+    size: Int!
+    type_id: PosterType!
+}
+
+type Movie {
+    id: Int!
+    imdb: Int!
+    type: MovieType!
+    year: Int!
+    original_title: String!
+    url_title: String!
+    num_posters: Int!
+    num_groups: Int!
+    language: String!
+    country: String!
+    release_date: String!
+    director: String!
+    genre: String!
+    runtime: Int!
+    summary: String!
+    poster: Poster
+}
+
+type Query {
+    countries: [Country]
+    genres: [Genre]
+    random: [Movie]
+    search(movieType: String, genreType: String, yearFrom: String, yearTo: String, country: String): [Movie]
+}

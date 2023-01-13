@@ -1,0 +1,64 @@
+{
+    "components": {
+        "main": {
+            "Settings": {
+                "title": "Settings",
+                "placeholder": {
+                    "movieType": "Movie type",
+                    "genreType": "Genre",
+                    "yearFrom": "Year from",
+                    "yearTo": "Year to",
+                    "country": "Country"
+                },
+                "label": {
+                    "save": "Save",
+                    "reset": "Reset"
+                }
+            },
+            "Info": {
+                "title": "Info",
+                "label": {
+                    "originalTitle": "Original title",
+                    "year": "Year",
+                    "country": "Country",
+                    "director": "Director",
+                    "genre": "Genre",
+                    "runtime": "Runtime",
+                    "summary": "Summary"
+                }
+            }
+        },
+        "shared": {
+            "ErrorBoundary": {
+                "title": "There was some error..."
+            }
+        }
+    },
+    "common": {
+        "label": {
+            "MovieType": {
+                "0": "Both",
+                "1": "Movie",
+                "2": "Series"
+            },
+            "network": {
+                "online": "Connection has beed restored",
+                "offline": "Connection has been lost"
+            }
+        },
+        "errors": {
+            "movieType": {
+                "invalid": "The value of movie type is invalid"
+            },
+            "yearFrom": {
+                "invalid": "The value of the start year is invalid"
+            },
+            "yearTo": {
+                "invalid": "The value of the end year is invalid"
+            },
+            "settings": {
+                "parsing": "Cannot parse previously saved settings"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import '@themes/basic/colors.module.scss';
+
+.cont {
+    padding: 2.5rem;
+}
+
+.panelTitle {
+    color: $white100;
+    margin-bottom: 4rem;
+}
+
+.list {
+    width: 100%;
+}
+
+.listItemKey {
+    color: $white60
+}
+
+.listItemValue {
+    color: $primaryColorMain100
+}

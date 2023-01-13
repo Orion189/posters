@@ -1,0 +1,23 @@
+body .hidden {
+    display: none;
+}
+
+body .fieldError {
+    color: #f44336;
+}
+
+body .menuItemDefaultValue {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+body .actionsCont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+body .fullOpacity {
+    opacity: 1;
+}

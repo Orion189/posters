@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Info renders <Info /> unchanged 1`] = `
+<div>
+  <div
+    class="cont MuiBox-root css-0"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom panelTitle css-h93ljk-MuiTypography-root"
+    >
+      components.main.Info.title
+    </h5>
+    <ul
+      class="MuiList-root MuiList-padding list css-h4y409-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+      >
+        <div
+          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body1 listItemKey css-10hburv-MuiTypography-root"
+          >
+            components.main.Info.label.originalTitle
+          </span>
+          <h6
+            class="MuiTypography-root MuiTypography-h6 listItemValue css-cbexrx-MuiTypography-root"
+          >
+            Test movie title
+          </h6>
+        </div>
+      </li>
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+      >
+        <div
+          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body1 listItemKey css-10hburv-MuiTypography-root"
+          >
+            components.main.Info.label.year
+          </span>
+          <h6
+            class="MuiTypography-root MuiTypography-h6 listItemValue css-cbexrx-MuiTypography-root"
+          >
+            1999
+          </h6>
+        </div>
+      </li>
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+      >
+        <div
+          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body1 listItemKey css-10hburv-MuiTypography-root"
+          >
+            components.main.Info.label.country
+          </span>
+          <h6
+            class="MuiTypography-root MuiTypography-h6 listItemValue css-cbexrx-MuiTypography-root"
+          >
+            US
+          </h6>
+        </div>
+      </li>
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+      >
+        <div
+          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body1 listItemKey css-10hburv-MuiTypography-root"
+          >
+            components.main.Info.label.director
+          </span>
+          <h6
+            class="MuiTypography-root MuiTypography-h6 listItemValue css-cbexrx-MuiTypography-root"
+          >
+            John Doe
+          </h6>
+        </div>
+      </li>
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+      >
+        <div
+          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body1 listItemKey css-10hburv-MuiTypography-root"
+          >
+            components.main.Info.label.genre
+          </span>
+          <h6
+            class="MuiTypography-root MuiTypography-h6 listItemValue css-cbexrx-MuiTypography-root"
+          >
+            Drama
+          </h6>
+        </div>
+      </li>
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+      >
+        <div
+          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body1 listItemKey css-10hburv-MuiTypography-root"
+          >
+            components.main.Info.label.runtime
+          </span>
+          <h6
+            class="MuiTypography-root MuiTypography-h6 listItemValue css-cbexrx-MuiTypography-root"
+          >
+            180
+          </h6>
+        </div>
+      </li>
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+      >
+        <div
+          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body1 listItemKey css-10hburv-MuiTypography-root"
+          >
+            components.main.Info.label.summary
+          </span>
+          <h6
+            class="MuiTypography-root MuiTypography-h6 listItemValue css-cbexrx-MuiTypography-root"
+          >
+            Test movie summary
+          </h6>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

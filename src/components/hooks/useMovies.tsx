@@ -43,31 +43,7 @@ export const useMovies = () => {
             }
         }
     });
-    /*
-    const getRandomMovies = async () => {
-        const response = await fetch(`${publicRuntimeConfig.host}/api/random`);
-        const moviesData = await response.json();
 
-        return moviesData.filter((movie: Movie) => movie.poster);
-    };
-    const getMoviesBySettings = useCallback(async (settingsStr: string) => {
-        try {
-            const settings = JSON.parse(settingsStr);
-            const url = new URL(`${publicRuntimeConfig.host}/api/search`);
-
-            url.search = Object.entries(settings)
-                .map((pair) => pair.join('='))
-                .join('&');
-
-            const response = await fetch(url);
-            const moviesData = await response.json();
-
-            return moviesData.filter((movie: Movie) => movie.poster);
-        } catch (e) {
-            enqueueSnackbar(t('common.errors.settings.parsing'), { variant: 'error' });
-        }
-    }, [t, enqueueSnackbar]);
-    */
     const changeMovie = useCallback(async () => {
         const isMovieAvailable = index !== undefined && movies[index + 1];
 

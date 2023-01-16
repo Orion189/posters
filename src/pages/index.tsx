@@ -2,8 +2,7 @@ import { FC } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import client from 'src/graphql';
-// import getConfig from 'next/config';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, GetServerSideProps } from 'next';
 import styles from './style.module.scss';
 import type { Movie, Settings } from 'src/types';
 import { useMovies } from '@components/hooks/useMovies';
@@ -13,10 +12,7 @@ type IndexPageProps = {
     settingsData: Settings;
 };
 
-// const { publicRuntimeConfig } = getConfig();
 const getGenres = async () => {
-    // const response = await fetch(`${publicRuntimeConfig.host}/api/genres`);
-    // const genres = await data.json();
     try {
         const {
             data: { genres }
@@ -30,8 +26,6 @@ const getGenres = async () => {
     }
 };
 const getCountries = async () => {
-    // const response = await fetch(`${publicRuntimeConfig.host}/api/countries`);
-    // const countries = await response.json();
     try {
         const {
             data: { countries }
@@ -45,7 +39,7 @@ const getCountries = async () => {
     }
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
     const genresData = await getGenres();
     const countriesData = await getCountries();
 

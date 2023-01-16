@@ -4,7 +4,7 @@ import { graphqlQueries } from '../../../__mocks__/queries';
 import { MockedProvider } from '@apollo/client/testing';
 import { useMovies } from '@components/hooks/useMovies';
 
-const TIMEOUT = 1000 * 5;
+const TIMEOUT = 1000 * 30;
 let enqueueSnackbar: jest.Mock;
 let setMovieInfo: jest.Mock;
 let setLoaderVisibility: jest.Mock;

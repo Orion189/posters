@@ -71,27 +71,7 @@ describe('Settings', () => {
             expect(window.localStorage.setItem).toHaveBeenCalledWith('settings', JSON.stringify(values));
         });     
     });
-/*
-    it('renders <Settings /> props', () => {
-        render(<Settings />);
 
-        const original_title = screen.getByText(movieInfo.original_title);
-        const year = screen.getByText(movieInfo.year);
-        const country = screen.getByText(movieInfo.country);
-        const director = screen.getByText(movieInfo.director);
-        const genre = screen.getByText(movieInfo.genre);
-        const runtime = screen.getByText(movieInfo.runtime);
-        const summary = screen.getByText(movieInfo.summary);
-
-        expect(original_title).toBeInTheDocument();
-        expect(year).toBeInTheDocument();
-        expect(country).toBeInTheDocument();
-        expect(director).toBeInTheDocument();
-        expect(genre).toBeInTheDocument();
-        expect(runtime).toBeInTheDocument();
-        expect(summary).toBeInTheDocument();
-    });
-*/
     it('Renders <Settings /> unchanged', () => {
         const { container } = render(<Settings genresData={genresData} countriesData={countriesData} />);
 

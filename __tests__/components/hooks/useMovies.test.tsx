@@ -50,7 +50,7 @@ describe('useMovies', () => {
     let cleanupFunc: ReturnType<EffectCallback>;
     let timeoutRef: MutableRefObject<number | undefined>;
     const TestComponent: FC = () => {
-        const { index, movies } = useMovies();
+        useMovies();
 
         return null;
     };

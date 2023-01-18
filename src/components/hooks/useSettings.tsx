@@ -1,4 +1,4 @@
-import { useState, ReactNode, FC, Dispatch, SetStateAction, createContext, useContext } from 'react';
+import { useState, ReactNode, FC, Dispatch, SetStateAction, createContext, useContext, useMemo } from 'react';
 
 type SettingsContextProps = {
     isSettingsStored: boolean;
@@ -13,10 +13,9 @@ const SettingsContext = createContext<SettingsContextProps | undefined>(undefine
 
 export const SettingsProvider: FC<SettingsProviderProps> = ({ children }) => {
     const [isSettingsStored, setSettingsStored] = useState(false);
+    const data = useMemo(() => ({ isSettingsStored, setSettingsStored }), [isSettingsStored]);
 
-    return (
-        <SettingsContext.Provider value={{ isSettingsStored, setSettingsStored }}>{children}</SettingsContext.Provider>
-    );
+    return <SettingsContext.Provider value={data}>{children}</SettingsContext.Provider>;
 };
 
 export const useSettings = () => {

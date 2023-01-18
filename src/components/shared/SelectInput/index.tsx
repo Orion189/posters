@@ -19,7 +19,7 @@ type SelectProps = {
 };
 
 const SelectInput = ({
-    field, // { name, value, onChange, onBlur }
+    field, // consist of { name, value, onChange, onBlur }
     form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
     label,
     data,

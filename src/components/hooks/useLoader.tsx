@@ -1,4 +1,4 @@
-import { useState, ReactNode, FC, Dispatch, SetStateAction, createContext, useContext } from 'react';
+import { useState, ReactNode, FC, Dispatch, SetStateAction, createContext, useContext, useMemo } from 'react';
 
 type LoaderContextProps = {
     isLoaderVisible: boolean;
@@ -13,8 +13,9 @@ const LoaderContext = createContext<LoaderContextProps | undefined>(undefined);
 
 export const LoaderProvider: FC<LoaderProviderProps> = ({ children }) => {
     const [isLoaderVisible, setLoaderVisibility] = useState(false);
+    const data = useMemo(() => ({ isLoaderVisible, setLoaderVisibility }), [isLoaderVisible]);
 
-    return <LoaderContext.Provider value={{ isLoaderVisible, setLoaderVisibility }}>{children}</LoaderContext.Provider>;
+    return <LoaderContext.Provider value={data}>{children}</LoaderContext.Provider>;
 };
 
 export const useLoader = () => {

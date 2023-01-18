@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useCallback } from 'react';
 import getConfig from 'next/config';
 import { useSettings } from '@components/hooks/useSettings';
 import { Genre, Country, Settings } from 'src/types';
@@ -11,19 +11,22 @@ type SettingsProps = {
 
 const { publicRuntimeConfig } = getConfig();
 
-const Settings: FC<SettingsProps> = ({ genresData, countriesData }) => {
+const SettingsFC: FC<SettingsProps> = ({ genresData, countriesData }) => {
     const { setSettingsStored } = useSettings();
-    const onSaveForm = async (values: Settings) => {
-        window.localStorage.setItem(publicRuntimeConfig.lsItemName, JSON.stringify(values));
+    const onSaveForm = useCallback(
+        (values: Settings) => {
+            window.localStorage.setItem(publicRuntimeConfig.lsItemName, JSON.stringify(values));
 
-        setSettingsStored(true);
-    };
+            setSettingsStored(true);
+        },
+        [setSettingsStored]
+    );
 
-    const onResetForm = () => {
+    const onResetForm = useCallback(() => {
         window.localStorage.removeItem(publicRuntimeConfig.lsItemName);
 
         setSettingsStored(false);
-    };
+    }, [setSettingsStored]);
 
     return (
         <SettingsView
@@ -35,4 +38,4 @@ const Settings: FC<SettingsProps> = ({ genresData, countriesData }) => {
     );
 };
 
-export default Settings;
+export default SettingsFC;

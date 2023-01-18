@@ -1,4 +1,3 @@
-import { readFileSync } from 'fs';
 import { ApolloServer } from '@apollo/server';
 import type { NextApiRequest } from 'next';
 import type { GraphQLServerContext } from 'src/types';

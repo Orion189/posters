@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useCallback } from 'react';
 import { Formik, Form, FastField } from 'formik';
 import Button from '@mui/material/Button';
 import FormGroup from '@mui/material/FormGroup';
@@ -19,7 +19,26 @@ type SettingsProps = {
     onResetForm: () => void;
 };
 
-const Settings: FC<SettingsProps> = ({ onSaveForm, genresData, countriesData, onResetForm }) => {
+type ResetBtnProps = {
+    resetForm: () => void;
+    onResetForm: () => void;
+};
+
+const ResetBtn: FC<ResetBtnProps> = ({ resetForm, onResetForm }) => {
+    const { t } = useTranslation();
+    const onClickHandler = useCallback(() => {
+        resetForm();
+        onResetForm();
+    }, [resetForm, onResetForm]);
+
+    return (
+        <Button color="primary" variant="outlined" onClick={onClickHandler}>
+            {t('components.main.Settings.label.reset')}
+        </Button>
+    );
+};
+
+const SettingsFC: FC<SettingsProps> = ({ onSaveForm, genresData, countriesData, onResetForm }) => {
     const { t } = useTranslation();
     const movieTypeData = [
         { key: MovieType.BOTH, value: t(`common.label.MovieType.${MovieType.BOTH}`) },
@@ -110,16 +129,7 @@ const Settings: FC<SettingsProps> = ({ onSaveForm, genresData, countriesData, on
                             </Button>
                         </FormControl>
                         <FormControl variant="standard">
-                            <Button
-                                color="primary"
-                                variant="outlined"
-                                onClick={() => {
-                                    resetForm();
-                                    onResetForm();
-                                }}
-                            >
-                                {t('components.main.Settings.label.reset')}
-                            </Button>
+                            <ResetBtn resetForm={resetForm} onResetForm={onResetForm} />
                         </FormControl>
                     </FormGroup>
                 </Form>
@@ -128,4 +138,4 @@ const Settings: FC<SettingsProps> = ({ onSaveForm, genresData, countriesData, on
     );
 };
 
-export default Settings;
+export default SettingsFC;

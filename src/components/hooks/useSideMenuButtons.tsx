@@ -11,7 +11,6 @@ export const useSideMenuButtons = (
         const settingsBtn = settingsBtnRef?.current;
         const infoBtn = infoBtnRef?.current;
         let isBtnsShown = isBtnsShownRef?.current;
-        let timeout = timeoutRef?.current;
 
         if (!isBtnsShown) {
             settingsBtn?.classList.add(commonStyles.fullOpacity);
@@ -19,8 +18,8 @@ export const useSideMenuButtons = (
             isBtnsShown = true;
         }
 
-        window.clearTimeout(timeout);
-        timeout = window.setTimeout(() => {
+        window.clearTimeout(timeoutRef?.current);
+        timeoutRef.current = window.setTimeout(() => {
             settingsBtn?.classList.remove(commonStyles.fullOpacity);
             infoBtn?.classList.remove(commonStyles.fullOpacity);
             isBtnsShown = false;

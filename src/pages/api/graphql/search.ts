@@ -5,13 +5,6 @@ const { serverRuntimeConfig } = getConfig();
 
 const handler = async (parent: any, args: any, context: GraphQLServerContext, info: any) => {
     const url = new URL(`${serverRuntimeConfig.apiUrl}/search/movies`);
-    /*const searchParams = {
-        type: context.req.query.movieType,
-        genre_id: context.req.query.genreType,
-        year_from: context.req.query.yearFrom,
-        year_to: context.req.query.yearTo,
-        country_code: context.req.query.country
-    };*/
     const searchParams = {
         type: args.movieType,
         genre_id: args.genreType,

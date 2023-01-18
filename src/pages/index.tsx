@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import client from 'src/graphql';
-import { GetStaticProps, GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next';
 import styles from './style.module.scss';
 import type { Movie, Settings } from 'src/types';
 import { useMovies } from '@components/hooks/useMovies';

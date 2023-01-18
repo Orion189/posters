@@ -1,4 +1,4 @@
-import { useState, ReactNode, FC, Dispatch, SetStateAction, useContext, createContext } from 'react';
+import { useState, ReactNode, FC, Dispatch, SetStateAction, useContext, createContext, useMemo } from 'react';
 import { MovieInfo } from 'src/types';
 
 type MovieInfoContextProps = {
@@ -14,8 +14,9 @@ const MovieInfoContext = createContext<MovieInfoContextProps | undefined>(undefi
 
 export const MovieInfoProvider: FC<MovieInfoProviderProps> = ({ children }) => {
     const [movieInfo, setMovieInfo] = useState<MovieInfo | undefined>(undefined);
+    const data = useMemo(() => ({ movieInfo, setMovieInfo }), [movieInfo]);
 
-    return <MovieInfoContext.Provider value={{ movieInfo, setMovieInfo }}>{children}</MovieInfoContext.Provider>;
+    return <MovieInfoContext.Provider value={data}>{children}</MovieInfoContext.Provider>;
 };
 
 export const useMovieInfo = () => {
